@@ -20,7 +20,7 @@ if(! is_writable('plugins/Weathermap/configs')) {
   echo ('Click <a href="plugins/Weathermap/editor.php">here to access the editor</a> where you can create and manage maps.');
   $directory = 'plugins/Weathermap/output/';
   $images = glob($directory . "*.png");
-  echo('<div class="container">
+  echo('<div class="container-fluid">
     <ul class="list-inline">');
   foreach($images as $image) {
     $overlib = pathinfo($image);
