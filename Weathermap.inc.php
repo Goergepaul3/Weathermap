@@ -24,7 +24,7 @@ if(! is_writable('plugins/Weathermap/configs')) {
     <ul class="list-inline">');
   foreach($images as $image) {
     $overlib = pathinfo($image);
-    $overlib = $overlib['dirname'] . '/' . $overlib['basename'] . '.html';
+    $overlib = $overlib['dirname'] . '/' . substr($overlib['basename'], 0, -4) . '.html';
     echo('<li><a href="' . $overlib . '"><img class="img-responsive" src="' . $image . '"/></a></li>');
   }
   echo('</ul>
